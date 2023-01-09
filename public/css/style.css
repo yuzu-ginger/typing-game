@@ -1,0 +1,306 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Amatic SC', cursive;
+}
+
+/* 背景 */
+#particles-js {
+    position: fixed;  /*描画固定*/
+    z-index: -1;  /*描画を一番下に*/
+    width: 100%;
+    height: 100%;
+    background-color: #020E34;  /*背景色*/
+}
+
+main {
+    height: 700px;
+    /* あとで調整 */
+    color: white; 
+    text-align: center;
+    font-size: 30px;
+    overflow-x: hidden;
+}
+
+#wrapper {
+    position: relative;
+    /*描画を#particles-jsよりも上にするためposition:relative;を指定*/
+    z-index: 1;
+    /*z-indexの数字を大きくすることで描画を#particles-jsよりも上に*/
+    width: 100%;
+    height: 100%;
+}
+
+/* header */
+header {
+    background-color: black;
+    padding: 10px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo {
+    font-size: 30px;
+}
+
+.header-list {
+    display: flex;
+    align-items: center;
+    gap: 32px;  /* 間を開ける */
+    font-size: 20px;
+}
+
+/* タイピングのテキスト */
+.text-box {
+    width: 80%;
+    height: 50%;
+    background-color: white;
+    opacity: 0.7;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    border-radius: 10px;
+}
+
+#text {
+    font-size: 90px;
+    font-weight: bold;
+    color: #666;
+    font-family: 'Zen Maru Gothic', sans-serif;
+}
+
+span {
+    transition: all 300ms 0s ease;
+}
+
+/* タイピング入力済み */
+.add-blue {
+    color: #00f;
+    text-decoration: underline; /* ボーダーライン */
+}
+
+/* タイピング日本語 */
+#text-jp {
+    font-size: 50px;
+    color: #666;
+    font-family: 'Zen Maru Gothic', sans-serif;
+}
+
+/* タイピングミス */
+.miss-red {
+    color: #ff0000;
+}
+
+/* タイピング中 スコア, ミスの数字 */
+.number {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* 黄色の文字 目立たせたいところ */
+.yellow {
+    font-size: 40px;
+    color: #f0e68c;
+}
+
+/* ランキング表 */
+.ranking-table {
+    margin-top: 40px;
+    display: flex;
+    width: 100%;
+}
+
+.ranking-item {
+    width: 100%;
+    margin: 5px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+}
+
+table {
+    margin: 0 auto;
+    width: 90%;
+    border-collapse: separate;
+    border-spacing: 0px 8px;
+}
+
+th {
+    font-size: 40px;
+}
+
+tbody tr:nth-child(1) {
+    font-size: 35px;
+    color: #073165;
+    background-image: linear-gradient(45deg, #B67B03 0%, #DAAF08 45%, #FEE9A0 70%, #DAAF08 85%, #B67B03 90% 100%);
+}
+
+tbody tr:nth-child(2) {
+    color: #073165;
+    background: linear-gradient(45deg, #757575 0%, #9E9E9E 45%, #E8E8E8 70%, #9E9E9E 85%, #757575 90% 100%);
+}
+
+
+/* 日本語フォント */
+.jp {
+    font-family: 'Zen Maru Gothic', sans-serif;
+}
+
+/* リンク */
+a {
+    color: white;
+    text-decoration: none;  /* リンクのアンダーラインを消す */
+}
+
+#again {
+    margin-bottom: 10px;
+}
+
+#again a {
+    color: #DAAF08;
+    border-bottom: 5px dotted #DAAF08;
+}
+
+/* form */
+.form {
+    width: 80%;
+    height: 40%;
+    padding: 20px;
+    padding-top: 50px;
+    background: rgba(255, 255, 255, 0.5);
+    margin: 0 auto;
+    margin-top: 20px;
+    text-align: center;  /* 左右中央寄せ */
+    border-radius: 10px;
+}
+
+input {
+    /* font-size: 20px; */
+    width: 80%;
+    height: 15%;
+    margin-bottom: 25px;
+}
+
+input:focus {
+    border: 2px solid #001e43;
+}
+
+#btn {
+    width: 30%;
+    background: #073165;
+    opacity: 1.0;
+    color: #fff;
+    font-family: 'Amatic SC', cursive;
+    font-size: 25px;
+}
+
+.rnk_form #btn {
+    background: #fff;
+    color: #073165;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+/* error message */
+.errors {
+    width: 50%;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    background: rgba(255, 0, 0, 0.5);
+    border-radius: 10px;
+    border: 1px solid #fff;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+/* index */
+.game-list {
+    margin: 20px;
+}
+
+/* マウスを置くと色が変わる */
+.game-list a:hover {
+    color: #f0e68c;
+}
+
+/* スライダー */
+.slider {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.slider img {
+    width: 35vw; /*スライダー内の画像を35vwにしてレスポンシブ化*/
+    height: auto;
+}
+
+.slider .slick-slide {
+    transform: scale(0.5); /*左右の画像のサイズを80%に*/
+    transition: all .5s; /*拡大や透過のアニメーションを0.5秒で行う*/
+    opacity: 0.5; /*透過50%*/
+}
+
+.slider .slick-slide.slick-center {
+    transform: scale(1); /*中央の画像のサイズだけ等倍に*/
+    opacity: 1; /*透過なし*/
+}
+
+
+/*矢印の設定*/
+/*戻る、次へ矢印の位置*/
+.slick-prev, .slick-next {
+    position: absolute; /*絶対配置にする*/
+    top: 42%;
+    cursor: pointer; /*マウスカーソルを指マークに*/
+    outline: none; /*クリックをしたら出てくる枠線を消す*/
+    border-top: 2px solid #fff; /*矢印の色*/
+    border-right: 2px solid #fff; /*矢印の色*/
+    height: 15px;
+    width: 15px;
+}
+
+.slick-prev {
+    /*戻る矢印の位置と形状*/
+    left: -1.5%;
+    transform: rotate(-135deg);
+}
+
+.slick-next {
+    /*次へ矢印の位置と形状*/
+    right: -1.5%;
+    transform: rotate(45deg);
+}
+
+/*ドットナビゲーションの設定*/
+.slick-dots {
+    text-align: center;
+    margin: 20px 0 0 0;
+}
+
+.slick-dots li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.slick-dots button {
+    color: transparent;
+    outline: none;
+    width: 10px; /*ドットボタンのサイズ*/
+    height: 10px; /*ドットボタンのサイズ*/
+    display: block;
+    border-radius: 50%;
+    background: #fff; /*ドットボタンの色*/
+}
+
+.slick-dots .slick-active button {
+    background: #e1cc0e; /*ドットボタンの現在地表示の色*/
+}

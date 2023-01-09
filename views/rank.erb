@@ -1,0 +1,71 @@
+<h1>Ranking</h1>
+<div class="ranking-table">
+    <!-- game1 -->
+    <div class="ranking-item">
+        <h2>Solar System</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Name</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% @users1.each_with_index do |user, i| %>
+                    <tr>
+                        <th><%= i+1 %></th>
+                        <td class="jp"><%= user.name %></td>
+                        <td><%= user.score1 %> point</td>
+                    </tr>
+                <% end %>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- game2 -->
+    <div class="ranking-item">
+        <h2>Constellation</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Name</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% @users2.each_with_index do |user, i| %>
+                    <tr>
+                        <th><%= i+1 %></th>
+                        <td class="jp"><%= user.name %></td>
+                        <td><%= user.score2 %> point</td>
+                    </tr>
+                <% end %>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- game3 -->
+    <div class="ranking-item">
+        <h2>Nebula Galaxy</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Name</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% @users3.each_with_index do |user, i| %>
+                    <tr>
+                        <th><%= i+1 %></th>
+                        <td class="jp"><%= user.name %></td>
+                        <td><%= user.score3 %> point</td>
+                    </tr>
+                <% end %>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+<h1 class="header-logo"><a href="/"><img src="/img/orion.png" height="30"> Space Typing</a></h1>
+<ul class="header-list">
+    <% if logged_in? %>
+        <li class="header-item"><a href="/index"><i class="fa-solid fa-star"></i> Index</a></li>
+        <li class="header-item"><a href="/user/logout"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+    <% else %>
+        <li class="header-item"><a href="/user/signup"><i class="fa-solid fa-user"></i> Sign up</a></li>
+        <li class="header-item"><a href="/user/login"><i class="fa-solid fa-right-to-bracket"></i> Login</a></li>
+    <% end %>
+    <li class="header-item"><a href="/ranking"><i class="fa-solid fa-crown"></i> Ranking</a></li>
+</ul>

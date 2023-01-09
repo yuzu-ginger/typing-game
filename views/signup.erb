@@ -1,0 +1,8 @@
+<h1>Sign Up</h1>
+<%= erb :error %>
+<form class="form" action="/user/signup" method="POST">
+  <input id="input_name" type="text" name="name" placeholder="Name" required><br>
+  <input id="input_pass" type="password" name="password" placeholder="Password" required><br>
+  <input id="input_re_pass" type="password" name="password_confirmation" placeholder="Confirmation Password" required><br>
+  <input id="btn" type="submit" value="Sign up">
+</form>

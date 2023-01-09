@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>Space Typing</title>
+        <%= include_gon %> <!-- use sinatra-gon -->
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+        <link href="https://fonts.googleapis.com/css2?family=Abel&family=Amatic+SC:wght@700&family=M+PLUS+Rounded+1c:wght@700&family=Zen+Maru+Gothic:wght@300;500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Abel&family=Amatic+SC:wght@700&family=Jost:wght@300&family=M+PLUS+Rounded+1c:wght@700&family=Zen+Maru+Gothic:wght@300;400;500&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/8038f2f0ce.js" crossorigin="anonymous"></script>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="icon" href="/img/orion.ico">
+    </head>
+    <body>
+        <div id="particles-js"></div>
+        <div id="wrapper">
+            <header>
+                <%= erb :header %>
+            </header>
+            <main>
+                <%= yield %>
+            </main>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+        <script src="js/background.js"></script>
+    </body>
+</html>

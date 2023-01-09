@@ -1,0 +1,24 @@
+<h1><%= @title %></h1>
+<p class="highscore">Highscore：<%= @highScore %> point</p>
+<form id="form" class="rnk_form" action="/user/update" method="POST">
+    <input id="hidden" type="hidden" name="_method" value="patch">
+    <input id="id" type="hidden" name="id" value=<%= @user.id %>>
+    <input id="rank" type="hidden" name="score" value="">
+    <input id="game_id" type="hidden" name="game_id" value=<%= @game_id %>>
+</form>
+
+<p class="info">
+    Letter score <span id="score" class="number">0</span> 
+    Miss score <span id="miss" class="number">0</span>
+</p>
+<p id="timer" class="yellow">Press Enter Key!</p>  
+<P id="seikai" class="yellow"></P>
+<div id="again" class="animate__animated animate__pulse animate__infinite"></div>
+
+<div class="text-box">
+    <p id="text"></p>
+    <p id="text-jp"></p>
+</div>
+
+<script src="js/game.js"></script>
+<script src="js/typing.js"></script>
