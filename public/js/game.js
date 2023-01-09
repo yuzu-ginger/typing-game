@@ -6,7 +6,7 @@ const gameId = gon.gameId;
 
 // タイマーと正解数
 const timer = document.getElementById('timer');
-let TIME = 10;
+let TIME = 30;
 const seikai = document.getElementById('seikai');
 
 const form = document.getElementById('form');

@@ -9,9 +9,7 @@ Typing game of space terminology.
 - Sinatra 3.0.5
 - ActiveRecord 7.0.4
 - pg 1.4.5
-
 - PostgreSQL 15.1
-
 - JavaScript
 - Animation.css
 
