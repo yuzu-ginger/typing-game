@@ -2,8 +2,7 @@
 
 ## Description
 This is the final assignment for web design class.</br>
-
-***DEMO:***
+Typing game of space terminology.
 
 ## Language, Tool, Library...
 - Ruby 3.1.1
@@ -14,5 +13,12 @@ This is the final assignment for web design class.</br>
 - PostgreSQL 15.1
 
 - JavaScript
+- Animation.css
 
 ## Features
+- Login
+- Game ranking
+- Typing game (3type)
+    - Solar System
+    - Constellation
+    - Nebula・Galaxy
