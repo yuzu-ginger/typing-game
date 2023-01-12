@@ -225,6 +225,10 @@ input:focus {
     margin-top: 20px;
 }
 
+li {
+    list-style: none;
+}
+
 /* index */
 .game-list {
     margin: 20px;
