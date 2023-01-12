@@ -9,6 +9,7 @@ GEM
     mustermann (3.0.0)
       ruby2_keywords (~> 0.0.1)
     nio4r (2.5.8)
+    pg (1.4.5)
     pg (1.4.5-x64-mingw-ucrt)
     puma (6.0.2)
       nio4r (~> 2.0)
@@ -32,6 +33,7 @@ GEM
 
 PLATFORMS
   x64-mingw-ucrt
+  x86_64-linux
 
 DEPENDENCIES
   bcrypt
