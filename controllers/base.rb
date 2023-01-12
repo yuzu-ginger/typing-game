@@ -15,7 +15,8 @@ class Base < Sinatra::Base
         host:     "",
         username: ENV['myusername'],
         password: ENV['mypassword'],
-        database: ENV['mydatabase']
+        database: ENV['mydatabase'],
+        url: ENV['DATABASE_URL']
     )
 
     enable :sessions
