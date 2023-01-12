@@ -1,6 +1,6 @@
 require 'sinatra/base'
 require 'dotenv/load'
-require 'active_record'
+# require 'active_record'
 require 'gon-sinatra'
 require './models/user.rb'
 require './helpers/app_helpers.rb'
