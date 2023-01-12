@@ -19,6 +19,15 @@ class Base < Sinatra::Base
         url: ENV['DATABASE_URL']
     )
 
+    adapter:  ENV['myadapter'],
+    host:     "",
+    username: ENV['myusername'],
+    password: ENV['mypassword'],
+    database: ENV['mydatabase'],
+    url: ENV['DATABASE_URL']
+    connection = PG::Connection.new(:host => host, :user => username, :dbname => database, :port => '5432', :password => password, :url => url)
+    puts 'Successfully created connection to database'
+
     enable :sessions
     enable :method_override
     helpers AppHelper
