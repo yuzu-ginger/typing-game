@@ -61,7 +61,7 @@ DEPENDENCIES
   activerecord
   bcrypt
   dotenv
-  erb (= 4.0.1)
+  erb (~> 4.0)
   gon-sinatra
   pg
   puma
