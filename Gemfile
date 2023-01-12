@@ -12,7 +12,3 @@ gem 'puma'
 gem 'dotenv'
 gem 'gon-sinatra'
 gem 'bcrypt'
-
-group :production do
-    gem 'pg'
-end
