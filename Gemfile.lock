@@ -15,7 +15,7 @@ GEM
     cgi (0.3.6)
     concurrent-ruby (1.1.10)
     dotenv (2.8.1)
-    erb (4.0.1)
+    erb (4.0.2)
       cgi (>= 0.3.3)
     gon-sinatra (0.1.2)
       sinatra
