@@ -5,7 +5,7 @@ group :production do
     gem 'pg'
     gem 'sinatra'
     gem 'sinatra-contrib'
-    gem 'activerecord', '~> 5.1', '>= 5.1.5'
+    gem 'activerecord'
     gem 'rake'
     gem 'puma'
     gem 'dotenv'
