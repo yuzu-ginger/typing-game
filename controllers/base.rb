@@ -20,7 +20,7 @@ class Base < Sinatra::Base
         url: ENV['DATABASE_URL']
     )
 
-    connection = PG::Connection.new(:host => "", :user => ENV['myusername'], :dbname => ENV['mydatabase'], :port => '5432', :password => ENV['mypassword'], :url => ENV['DATABASE_URL'])
+    connection = PG::Connection.new(:host => "", :user => ENV['myusername'], :dbname => ENV['mydatabase'], :port => '5432', :password => ENV['mypassword'])
     puts 'Successfully created connection to database'
 
     enable :sessions
