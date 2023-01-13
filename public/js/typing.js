@@ -38,7 +38,7 @@ var textLists2 = [
 
 var textLists3 = [
     ["galaxy", "銀河"],
-    ["nebra", "星雲"],
+    ["nebla", "星雲"],
     ["pleiades", "すばる"],
     ["andromeda galaxy", "アンドロメダ銀河"],
     ["southern ring nebula", "南のリング星雲"],
