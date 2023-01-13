@@ -1,6 +1,7 @@
 require 'sinatra/base'
 require 'dotenv/load'
 require 'active_record'
+require 'pg'
 require 'gon-sinatra'
 require './models/user.rb'
 require './helpers/app_helpers.rb'
@@ -19,13 +20,7 @@ class Base < Sinatra::Base
         url: ENV['DATABASE_URL']
     )
 
-    adapter:  ENV['myadapter'],
-    host:     "",
-    username: ENV['myusername'],
-    password: ENV['mypassword'],
-    database: ENV['mydatabase'],
-    url: ENV['DATABASE_URL']
-    connection = PG::Connection.new(:host => host, :user => username, :dbname => database, :port => '5432', :password => password, :url => url)
+    connection = PG::Connection.new(:host => "", :user => ENV['myusername'], :dbname => ENV['mydatabase'], :port => '5432', :password => ENV['mypassword'], :url => ENV['DATABASE_URL'])
     puts 'Successfully created connection to database'
 
     enable :sessions
