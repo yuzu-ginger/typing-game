@@ -13,11 +13,11 @@ class Base < Sinatra::Base
 
     ActiveRecord::Base.establish_connection(
         adapter:  ENV['myadapter'],
-        host:     "",
+        host:     ENV['myhost'],
         username: ENV['myusername'],
         password: ENV['mypassword'],
         database: ENV['mydatabase'],
-        # url: ENV['DATABASE_URL']
+        url: ENV['DATABASE_URL']
     )
 
     enable :sessions
